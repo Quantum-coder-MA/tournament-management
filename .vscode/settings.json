@@ -1,0 +1,10 @@
+{
+    "python.analysis.extraPaths": [
+        "./gender-distrub",
+        "./distrub-club-score",
+        "./genderscore",
+        "./medals-club",
+        "./techniaue",
+        "./weight"
+    ]
+}
