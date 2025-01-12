@@ -5,6 +5,7 @@
         "./genderscore",
         "./medals-club",
         "./techniaue",
-        "./weight"
+        "./weight",
+        "./distrubution-part-club"
     ]
 }

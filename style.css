@@ -1,0 +1,64 @@
+
+/* Background and main app theme */
+body {
+    background-color: antiquewhite;
+}
+
+/* Sidebar customization */
+[data-testid="stSidebar"] {
+    background-color: #800000; /* Deep red sidebar for martial arts style */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+/* Buttons styling */
+button {
+    background-color: #FFD700; /* Gold buttons for highlights */
+    color: #800000; /* Deep red text for harmony with the sidebar */
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Headers and titles */
+h1, h2, h3 {
+    color: #FFD700; /* Consistent gold color for headers */
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #800000; /* Subtle shadow for depth */
+}
+
+/* Dataframe styling */
+[data-testid="stDataFrameContainer"] {
+    background-color: #333333; /* Dark background for dataframes */
+    color: #FFD700; /* Gold text for readability */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Links */
+a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Inputs */
+input, select {
+    background-color: #333333; /* Input fields with dark background */
+    color: #FFD700; /* Gold text for consistency */
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Success messages */
+.stAlert {
+    background-color: #4CAF50; /* Green background for success */
+    color: #FFFFFF; /* White text for readability */
+    border-radius: 5px;
+}

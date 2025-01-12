@@ -10,12 +10,26 @@ sys.path.append('C:\\Users\\elbak\\Downloads\\tournament-management\\genderscore
 sys.path.append('C:\\Users\\elbak\\Downloads\\tournament-management\\medals-club')
 sys.path.append('C:\\Users\\elbak\\Downloads\\tournament-management\\techniaue')
 sys.path.append('C:\\Users\\elbak\\Downloads\\tournament-management\\weight')
+sys.path.append('C:\\Users\\elbak\\Downloads\\tournament-management\\distrubution-part-club')
 from gender import gender_fighter
 from scoreclub import score_destrub
 from gensc import gender_score
 from clubs_medals import clubs_medals
 from tech import technique
 from weight_class import weight_class
+from distrib_partclub import club_part
+
+
+def load_css(file_path):
+    with open(file_path, "r") as f:
+        css = f.read()
+    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+
+css_file = "C:\\Users\\elbak\\Downloads\\tournament-management\\style.css" 
+if os.path.exists(css_file):
+    load_css(css_file)
+else:
+    st.warning(f"CSS file '{css_file}' not found!")
 EXCEL_FILE = "tournament_management.xlsx"
 FIGHTERif_SHEET = "fighters-info"
 MATCHES_SHEET = "matches"
@@ -60,15 +74,14 @@ def graphics_analysis():
         st.session_state["page5"] = "graphics_analysis"
         st.session_state["page6"] = "graphics_analysis"
         st.session_state["page7"] = "graphics_analysis"
+        st.session_state["page8"] = "graphics_analysis"
         st.rerun()
 
-    # Sidebar for options
     page = st.sidebar.radio("Options", [
         "distrubution par sexe", "distrubution par club", "distrubution de score par sexes", 
-        "distrubution de medailles par club", "distrubution de technique", "distrubution de poids"
+        "distrubution de medailles par club", "distrubution de technique", "distrubution de poids","distrubution participant par club"
     ])
 
-    # Call corresponding function based on selected option
     if page == "distrubution par sexe":
         gender_fighter()
     elif page == "distrubution par club":
@@ -81,12 +94,14 @@ def graphics_analysis():
         technique()
     elif page == "distrubution de poids":
         weight_class()
+    elif page == "distrubution participant par club":
+        club_part()
         
         
 def accueil():
     st.title("Accueil")
     st.image(r"C:\\Users\\elbak\\Downloads\\ahmeddd.jpg", use_container_width =True)
-    st.write("Bienvenue dans l'application de gestion des tournois.")
+    st.write("Bienvenue sur StremXFighter, l'application qui facilite la gestion des combattants, l'organisation des matchs et l'analyse des données avec des graphiques intuitifs.")
     
     col1, col2 = st.columns(2)
     with col1:

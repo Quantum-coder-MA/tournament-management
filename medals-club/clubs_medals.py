@@ -13,12 +13,12 @@ def clubs_medals():
     plt.bar(x_positions, table1["silver"], width=0.25, label="silver", color = "silver")
     plt.bar([x + 0.25 for x in x_positions], table1["gold"], width=0.25, label="gold", color = "gold")
 
-    plt.xticks(x_positions, table1["club"], rotation=45, fontsize=12)  
+    plt.xticks(x_positions, table1["club"], fontsize=12)  
 
     plt.xlabel("Clubs", fontsize=14)
     plt.ylabel("number of medals", fontsize=14)
     plt.yticks(range(0, int(table1[["bronze", "silver", "gold"]].max().max()) + 1, 1)) 
-    plt.title("clubs status", fontsize=16)
+    plt.title("clubs status", fontsize=18, color = 'red')
     plt.legend(fontsize=12)
 
     st.pyplot(plt)
