@@ -100,7 +100,7 @@ def graphics_analysis():
         
 def accueil():
     st.title("Accueil")
-    st.image(r"C:\\Users\\elbak\\Downloads\\ahmeddd.jpg", use_container_width =True)
+    st.image(r"pic\\ahmeddd.jpg", use_container_width =True)
     st.write("Bienvenue sur StremXFighter, l'application qui facilite la gestion des combattants, l'organisation des matchs et l'analyse des données avec des graphiques intuitifs.")
     
     col1, col2 = st.columns(2)
